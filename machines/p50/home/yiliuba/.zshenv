@@ -50,10 +50,6 @@ export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible.cfg"
 # MariaDB
 export MYSQL_HISTFILE="$XDG_DATA_HOME/mysql_history"
 
-# Hishtory
-export HISHTORY_PATH=.config/hishtory
-export HISHTORY_SERVER="http://192.168.2.22:45680"
-
 # Colorized manpage (less)
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
