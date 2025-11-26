@@ -178,4 +178,15 @@ function screenrecord () {
   echo "Video saved: $output"
 }
 
+<<<<<<<< HEAD:machines/p50/home/yiliuba/.config/zsh/.zshrc
+========
+# In this machine, the `HISHTORY_PATH` and `HISHTORY_SERVER` is set in
+# `~/.zshenv` file.
+export PATH="$PATH:/home/user/.config/hishtory"
+source /home/user/.config/hishtory/config.zsh
+
+# bun completions
+[ -s "/home/user/.local/work/bun/_bun" ] && source "/home/user/.local/work/bun/_bun"
+
+>>>>>>>> ditatompel-main:machines/p50/home/user/.config/zsh/.zshrc
 # vim: set ts=2 sw=2 et:

@@ -65,7 +65,7 @@ fi
 ## (is there a wallpaper?)" even you set polybar pseudo-transparency = false.
 feh --no-fehbg --bg-fill \
   "${HOME}/Pictures/walpapers/1.jpg" \
-  "${HOME}/Pictures/walpapers/1.jpg"
+  "${HOME}/Pictures/walpapers/2.jpg"
 
 # Kill and relaunch polybar
 killall -q polybar

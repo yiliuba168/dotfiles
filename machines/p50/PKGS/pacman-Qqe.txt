@@ -22,7 +22,6 @@ docker-buildx
 docker-compose
 dunst
 efibootmgr
-f2fs-tools
 fastfetch
 fd
 feh
@@ -32,6 +31,7 @@ firewalld
 flameshot
 freerdp
 fzf
+geoip-database-extra
 gimp
 git
 go
@@ -62,6 +62,7 @@ neovim
 network-manager-applet
 networkmanager
 nginx
+nginx-mod-geoip
 nginx-mod-geoip2
 nginx-mod-vts
 nheko
@@ -85,7 +86,7 @@ openssh
 optipng
 pacman-contrib
 pass
-pcmanfm-gtk3
+pcmanfm
 pipewire
 pipewire-pulse
 polybar
@@ -94,6 +95,7 @@ pugixml
 python-pip
 python-virtualenv
 qemu-desktop
+qpwgraph
 qt6-tools
 rclone
 remmina
@@ -102,6 +104,7 @@ rofi
 rsync
 scrcpy
 showmethekey
+smartmontools
 sshfs
 steam
 sudo
@@ -113,7 +116,6 @@ thunderbird
 tlp
 tmux
 tor
-ttf-font-awesome
 ttf-jetbrains-mono-nerd
 udisks2
 unzip
@@ -125,8 +127,10 @@ virt-manager
 weechat
 wget
 whois
+winbox
 wireguard-tools
 wireplumber
+woff2-font-awesome
 xbindkeys
 xclip
 xorg-server
