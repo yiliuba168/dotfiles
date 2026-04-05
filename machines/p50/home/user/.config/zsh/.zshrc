@@ -6,35 +6,17 @@ HISTSIZE=50500 # number of commands that are loaded into memory from history fil
 # options. See `man zshoptions`
 setopt PROMPT_SUBST
 
-#setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
-setopt HIST_SAVE_NO_DUPS
 
 # load the prompt
 . "${ZDOTDIR}/prompt.zsh"
 
-# xterm title
-autoload -Uz add-zsh-hook up-line-or-beginning-search down-line-or-beginning-search
-
-function xterm_title_precmd () {
-  print -Pn -- '\e]2;%n@%m %~\a'
-  [[ "$TERM" == 'screen'* ]] && print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-}\e\\'
-}
-
-function xterm_title_preexec () {
-  print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a"
-  [[ "$TERM" == 'screen'* ]] && { print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-} %# ' && print -n -- "${(q)1}\e\\"; }
-}
-
-if [[ "$TERM" == (Eterm*|alacritty*|aterm*|foot*|gnome*|konsole*|kterm*|putty*|rxvt*|screen*|wezterm*|tmux*|xterm*) ]]; then
-  add-zsh-hook -Uz precmd xterm_title_precmd
-  add-zsh-hook -Uz preexec xterm_title_preexec
-fi
-
 # History search
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
@@ -156,30 +138,6 @@ function yy() {
   rm -f -- "$tmp"
 }
 
-# Screen recording
-# This is wrapper function to record screen using ffmpeg (without audio).
-function screenrecord () {
-  local output="record.mkv"
-  if [[ "$1" == *.mkv ]]; then 
-    output="$1"
-  fi
-
-  # To take a screencast with lossless encoding and without audio: 
-  # ffmpeg -f x11grab -i "$DISPLAY" -video_size 1280x1920 -c:v ffvhuff "$output"
-
-  # When using the proprietary NVIDIA driver with the nvidia-utils,
-  # NVENC and NVDEC can be used for encoding/decoding.
-  # To print available options execute (hevc_nvenc may also be available):
-  # ffmpeg -help encoder=h264_nvenc
-  # See; https://wiki.archlinux.org/title/FFmpeg#NVIDIA_NVENC/NVDEC
-  ffmpeg -f x11grab -i "$DISPLAY" -video_size 1280x1920 \
-    -c:v h264_nvenc -rc constqp -qp 28 "$output"
-
-  echo "Video saved: $output"
-}
-
-<<<<<<<< HEAD:machines/p50/home/yiliuba/.config/zsh/.zshrc
-========
 # In this machine, the `HISHTORY_PATH` and `HISHTORY_SERVER` is set in
 # `~/.zshenv` file.
 export PATH="$PATH:/home/user/.config/hishtory"
@@ -188,5 +146,4 @@ source /home/user/.config/hishtory/config.zsh
 # bun completions
 [ -s "/home/user/.local/work/bun/_bun" ] && source "/home/user/.local/work/bun/_bun"
 
->>>>>>>> ditatompel-main:machines/p50/home/user/.config/zsh/.zshrc
 # vim: set ts=2 sw=2 et:
