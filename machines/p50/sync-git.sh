@@ -4,11 +4,7 @@
 
 set -e 
 
-<<<<<<< HEAD
-WORKING_DIR="${HOME}/.local/src/yi/yiliuba/machines/p50"
-=======
-WORKING_DIR="${HOME}/.local/src/dt/dit/machines/p50"
->>>>>>> ditatompel-main
+WORKING_DIR="${HOME}/.local/src/yi/dotfiles/machines/p50"
 
 rsync / "${WORKING_DIR}/" --include-from "${WORKING_DIR}/rsync-include" -avh
 
