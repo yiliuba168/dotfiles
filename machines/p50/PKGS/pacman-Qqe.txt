@@ -66,7 +66,6 @@ networkmanager
 nginx
 nginx-mod-geoip
 nginx-mod-geoip2
-nginx-mod-vts
 nheko
 nmap
 noise-suppression-for-voice
@@ -118,6 +117,7 @@ thunderbird
 tlp
 tmux
 tor
+tree-sitter-cli
 ttf-jetbrains-mono-nerd
 udisks2
 unzip
