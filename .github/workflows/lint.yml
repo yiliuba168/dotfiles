@@ -1,0 +1,20 @@
+name: Lint Markdown
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    name: Run Markdown Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Run markdownlint-cli2
+        uses: davidanson/markdownlint-cli2-action@main
+        with:
+          globs: |
+            **/*.md
+            !node_modules
