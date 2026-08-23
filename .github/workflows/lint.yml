@@ -12,9 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7
 
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Run markdownlint-cli2
-        uses: davidanson/markdownlint-cli2-action@main
-        with:
-          globs: |
-            **/*.md
-            !node_modules
+        run: bunx markdownlint-cli2 "**/*.md" "#node_modules"
