@@ -1,0 +1,61 @@
+# TODO: Review sync user's .local files
+# TODO: Sync system wide config files
++ /home/
++ /home/user/
+# user's homedir dotfiles
++ /home/user/.xinitrc
++ /home/user/.zshenv
+# user's config files
++ /home/user/.config/
+# alacritty config
++ /home/user/.config/alacritty
++ /home/user/.config/alacritty/***
+# bspwm config
++ /home/user/.config/bspwm/
+- /home/user/.config/bspwm/*.old
++ /home/user/.config/bspwm/***
+# rofi config
++ /home/user/.config/rofi/
++ /home/user/.config/rofi/config.rasi
++ /home/user/.config/rofi/scripts/
++ /home/user/.config/rofi/scripts/modi-main.sh
++ /home/user/.config/rofi/themes/
++ /home/user/.config/rofi/themes/main.rasi
++ /home/user/.config/rofi/themes/shared.rasi
++ /home/user/.config/rofi/themes/colorschemes/
++ /home/user/.config/rofi/themes/colorschemes/joygrayful.rasi
+# rofi config
++ /home/user/.config/rofi/
++ /home/user/.config/rofi/config.rasi
++ /home/user/.config/rofi/scripts/
++ /home/user/.config/rofi/scripts/modi-main.sh
++ /home/user/.config/rofi/themes/
++ /home/user/.config/rofi/themes/main.rasi
++ /home/user/.config/rofi/themes/shared.rasi
++ /home/user/.config/rofi/themes/colorschemes/
++ /home/user/.config/rofi/themes/colorschemes/joygrayful.rasi
+# sxhkdrc config
++ /home/user/.config/sxhkd/
++ /home/user/.config/sxhkd/**
+# zsh config
++ /home/user/.config/zsh/
++ /home/user/.config/zsh/prompt.zsh
++ /home/user/.config/zsh/.zshrc
+# nvim config
++ /home/user/.config/nvim/
++ /home/user/.config/nvim/init.lua
++ /home/user/.config/nvim/.gitignore
++ /home/user/.config/nvim/.stylua.toml
++ /home/user/.config/nvim/README.md
++ /home/user/.config/nvim/init.lua
++ /home/user/.config/nvim/LICENSE.md
++ /home/user/.config/nvim/lua/
++ /home/user/.config/nvim/lua/options.lua
++ /home/user/.config/nvim/lua/keymaps.lua
++ /home/user/.config/nvim/lua/lazy-plugins.lua
++ /home/user/.config/nvim/lua/custom/
++ /home/user/.config/nvim/lua/custom/plugins/
++ /home/user/.config/nvim/lua/custom/plugins/init.lua
++ /home/user/.config/nvim/lua/custom/plugins/gopher.lua
++ /home/user/.config/nvim/lua/kickstart/***
+- *
