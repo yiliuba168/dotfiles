@@ -47,6 +47,7 @@ nginx-mod-geoip2
 openbsd-netcat
 openssh
 pacoloco
+pcmanfm
 pipewire
 pipewire-audio
 pipewire-pulse
