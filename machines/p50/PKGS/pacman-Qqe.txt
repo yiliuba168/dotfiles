@@ -79,7 +79,8 @@ nvidia-container-toolkit
 nvidia-prime
 nvtop
 obs-multi-rtmp
-obs-studio-git
+obs-studio
+obs-studio-plugin-browser
 onefetch
 opencl-nvidia-580xx
 opencv
