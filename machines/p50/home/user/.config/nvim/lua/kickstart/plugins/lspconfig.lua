@@ -138,7 +138,7 @@ local servers = {
   goimports = {},
   templ = { filetypes = { 'templ' } },
   htmx = { filetypes = { 'html' } },
-  ts_ls = {},
+  tsc = {},
   svelte = { filetypes = { 'svelte' } },
 
   stylua = {}, -- Used to format Lua code
